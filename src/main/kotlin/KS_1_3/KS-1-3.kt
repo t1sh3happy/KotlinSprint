@@ -2,11 +2,14 @@ package org.Evgeniy.KS_1_3
 
 fun main() {
 
-    val year: Int = 1961
-    var hour: Int = 9
-    var minute: Int = 7
-    println("Год полета - $year Час посадки - ${String.format("%02d", hour)} Минута посадки - ${String.format("%02d", minute)}")
-    hour = 10
-    minute = 55
-    println("Время посадки - $hour:$minute")
+    val year: String = "1961"
+    var hour: String = "09"
+    var minute: String = "07"
+    println("Год полёта - $year")
+    println("Час взлёта - $hour")
+    println("Минута взлёта - $minute")
+    hour = "10"
+    minute = "55"
+    print("Время посадки - ")
+    println("$hour:$minute")
 }
