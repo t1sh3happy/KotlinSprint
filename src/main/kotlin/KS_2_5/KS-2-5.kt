@@ -2,7 +2,6 @@ package org.Evgeniy.KS_2_5
 
 import kotlin.math.pow
 
-
 fun main() {
     val amountForBank = 70000
     val interestRate = 0.167
