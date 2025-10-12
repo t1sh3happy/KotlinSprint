@@ -14,6 +14,5 @@ fun main() {
     val remainSecondsAfterHour: Short = (secondsInSpace % SECOND_IN_HOUR).toShort()
     val minutes: Short = (remainSecondsAfterHour / SECOND_IN_MINUTE).toShort()
     val seconds: Short = (remainSecondsAfterHour % SECOND_IN_MINUTE).toShort()
-
     println(String.format("%02d:%02d:%02d", hours, minutes, seconds))
 }
