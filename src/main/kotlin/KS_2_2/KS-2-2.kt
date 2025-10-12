@@ -8,16 +8,18 @@ package org.Evgeniy.KS_2_2
 //– Среднюю ЗП одного сотрудника после устройства стажеров.
 //
 //Каждый пункт посчитать и сохранить в переменную с соответствующим названием. Все значения необходимо вывести в виде целых чисел.
-const val PERMAMENT_EMPLOYEE_COUNT: Int = 50
-const val PERMAMENT_EMPLOYEE_SALARY: Int = 30000
-const val INRERN_COUNT: Int = 20
-const val INTERN_SALARY: Int = 20000
+
 
 fun main() {
-    val spendPermamentEmployee = PERMAMENT_EMPLOYEE_COUNT * PERMAMENT_EMPLOYEE_SALARY
-    val spendForIntern = INRERN_COUNT * INTERN_SALARY
+    val permanentEmployeeCount: Int = 50
+    val permanentEmployeeSalary: Int = 30000
+    val internCount: Int = 20
+    val internSalary: Int = 20000
+    
+    val spendPermamentEmployee = permanentEmployeeCount * permanentEmployeeSalary
+    val spendForIntern = internCount * internSalary
     val spendWithIntern = spendForIntern + spendPermamentEmployee
-    val averageSpend = (spendWithIntern / (PERMAMENT_EMPLOYEE_COUNT + INRERN_COUNT)).toInt()
+    val averageSpend = (spendWithIntern / (permanentEmployeeCount + internCount)).toInt()
 
     println("Расходы на выплату зарплаты постоянных сотрудников - $spendPermamentEmployee")
     println("Общие расходы по ЗП после прихода стажеров - $spendWithIntern")
