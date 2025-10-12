@@ -11,5 +11,6 @@ fun main() {
     hour = "10"
     minute = "55"
     print("Время посадки - ")
-    println("$hour:$minute")
+    println("$hour: ")
+    print("$minute")
 }
