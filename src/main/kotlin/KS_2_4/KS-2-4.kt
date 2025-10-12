@@ -3,12 +3,12 @@ package org.Evgeniy.KS_2_4
 const val BUFF = 20
 const val PERCENT = 100
 
-fun main(){
-var amountCrystalHels = 7
+fun main() {
+    var amountCrystalHels = 7
     var amountIronHels = 11
 
-    var cristalHelsWithBuff = ((amountCrystalHels * BUFF)/ PERCENT).toInt()
-        var ironHelsWithBuff = ((amountIronHels * BUFF)/ PERCENT).toInt()
+    var cristalHelsWithBuff = ((amountCrystalHels * BUFF) / PERCENT).toInt()
+    var ironHelsWithBuff = ((amountIronHels * BUFF) / PERCENT).toInt()
     println("Количество бонусных материалов кристаллической руды составляет  $cristalHelsWithBuff")
     println("Количество бонусных материалов железной руды составляет  $ironHelsWithBuff")
 }
