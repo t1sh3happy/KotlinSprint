@@ -3,16 +3,18 @@ package org.Evgeniy.KS_2_5
 import kotlin.math.pow
 
 fun main() {
-    val amountForBank = 70000
-    val interestRate = 0.167
-    val depositTerm = 20
-    val totalAmount = amountForBank * (1 + interestRate).pow(depositTerm)
+    var amountForBank = 70000
+    var  interestRatePercent = 16.7
+    var depositTerm = 20
+    val interestRateDecimal = interestRatePercent / 100
+    val totalAmount = amountForBank * (1 + interestRateDecimal).pow(depositTerm)
 
     println("Размер вклада через $depositTerm лет составляет %.3f".format(totalAmount))
 }
 
 //Напиши программу-калькулятор для банковского приложения (такой функционал
-// бывает на промо экранах). Используя формулу сложных процентов
+// бывает на промо экранах). Используя формулу сложных
+// процентов
 // (ее можно загуглить), нужно посчитать размер вклада через 20 лет с такими условиями:
 //
 //– Клиент ввел в приложении сумму 70_000 рублей (считать ее известной
