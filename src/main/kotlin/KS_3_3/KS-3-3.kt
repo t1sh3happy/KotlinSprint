@@ -1,8 +1,8 @@
 package org.Evgeniy.KS_3_3
 
 fun main() {
-    var number = 6
-    var multiplicationTable = """
+    val number = 6
+    val multiplicationTable = """
     |$number x 1 = ${number * 1}
     |$number x 2 = ${number * 2}
     |$number x 3 = ${number * 3}
