@@ -4,7 +4,7 @@ import kotlin.math.pow
 
 fun main() {
     var amountForBank = 70000
-    var  interestRatePercent = 16.7
+    var interestRatePercent = 16.7
     var depositTerm = 20
     val interestRateDecimal = interestRatePercent / 100
     val totalAmount = amountForBank * (1 + interestRateDecimal).pow(depositTerm)
