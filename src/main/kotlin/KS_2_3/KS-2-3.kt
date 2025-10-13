@@ -8,7 +8,7 @@ fun main() {
     val travelMinutes = 457
     val totalDepartureMinutes = departureHour * MINUTES_IN_HOUR + departureMinute
     val totalArriveMinutes = totalDepartureMinutes + travelMinutes
-    val arrivalHour = (totalArriveMinutes % MINUTES_IN_HOUR) % HOURS_IN_DAY
+    val arrivalHour = (totalArriveMinutes / MINUTES_IN_HOUR) % HOURS_IN_DAY
     val arrivalMinute = totalArriveMinutes % MINUTES_IN_HOUR
     println("Время прибытия: $arrivalHour:$arrivalMinute")
 }
