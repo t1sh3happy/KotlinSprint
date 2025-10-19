@@ -1,0 +1,104 @@
+autoCorrect: true
+
+build:
+  maxIssues: 0
+  deactivateAllRules: false
+
+comments:
+  CommentOverPrivateProperty:
+    active: true
+  UndocumentedPublicClass:
+    active: true
+  UndocumentedPublicFunction:
+    active: true
+
+complexity:
+  LargeClass:
+    active: true
+  MaxMethodComplexity:
+    active: true
+    threshold: 10
+
+coroutines:
+  active: true
+
+exceptions:
+  ThrowingExceptionsWithoutMessageOrCause:
+    active: true
+
+ktlint:
+  active: true
+  autoCorrect: false
+  MaxLineLength:
+    active: true
+    maxLineLength: 120
+    excludeCommentStatements: true
+
+naming:
+  FunctionNaming:
+    active: true
+  VariableMaxLength:
+    active: true
+
+performance:
+  SpreadOperator:
+    active: true
+
+potential-bugs:
+  UnsafeCast:
+    active: true
+
+style:
+
+  MaxLineLength:
+    active: true
+    maxLineLength: 120
+    excludeCommentStatements: true
+
+  BracesOnIfStatements:
+    active: true
+  CanBeNonNullable:
+    active: true
+  CascadingCallWrapping:
+    active: true
+  CollapsibleIfStatements:
+    active: true
+  ExplicitCollectionElementAccessMethod:
+    active: true
+  ForbiddenComment:
+    active: true
+  ForbiddenImport:
+    active: true
+  ForbiddenMethodCall:
+    active: true
+  MandatoryBracesLoops:
+    active: true
+
+  NestedClassesVisibility:
+    active: true
+  RedundantConstructorKeyword:
+    active: true
+  RedundantExplicitType:
+    active: true
+  RedundantHigherOrderMapUsage:
+    active: true
+  RedundantVisibilityModifier:
+    active: true
+  SpacingAfterPackageDeclaration:
+    active: true
+  TrimMultilineRawString:
+    active: true
+  UnderscoresInNumericLiterals:
+    active: true
+  UnnecessaryAnnotationUseSiteTarget:
+    active: true
+  UnnecessaryBackticks:
+    active: true
+  UnnecessaryFilter:
+    active: true
+  UnnecessaryLet:
+    active: true
+  UnnecessaryInnerClass:
+    active: true
+  UnusedImport:
+    active: false
