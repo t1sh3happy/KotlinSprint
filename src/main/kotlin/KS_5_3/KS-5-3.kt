@@ -1,8 +1,9 @@
 package org.Evgeniy.KS_5_3
 
 fun main() {
-    val firstNum = 29
-    val secondNum = 38
+    val firstNum = (0..42).random()
+    val secondNum = (0..42).random()
+    println("$firstNum и $secondNum")
     val winNum = "Выигрышные числа $firstNum и $secondNum"
     println("Вы играете в лотерею, вам необходимо угадать два числа от 0 до 42")
     print("Введите первое число : ")
@@ -12,8 +13,10 @@ fun main() {
 
     when {
         (inputNumOne == firstNum && inputNumTwo == secondNum) ||
-        (inputNumOne == secondNum && inputNumTwo == firstNum) ->
+        (inputNumOne == secondNum && inputNumTwo == firstNum) -> {
             println("Поздравляем! Вы выиграли главный приз")
+            println(winNum)
+        }
 
         inputNumOne == firstNum || inputNumOne == secondNum ||
         inputNumTwo == secondNum || inputNumTwo == firstNum -> {
