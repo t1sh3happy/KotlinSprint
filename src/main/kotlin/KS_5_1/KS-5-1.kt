@@ -7,5 +7,5 @@ fun main() {
     val total = readln().toInt()
 
     if (firstTerm + secondTerm == total) println("Добро пожаловать!")
-     else println("Доступ запрещен")
+    else println("Доступ запрещен")
 }
