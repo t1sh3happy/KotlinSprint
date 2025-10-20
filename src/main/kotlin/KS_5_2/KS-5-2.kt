@@ -6,7 +6,7 @@ const val AGE_OF_MAJORITY = 18
 
 fun main() {
     print("Введите год рождения : ")
-    val userAge = readln().toInt()
-    if (Year.now().value - userAge >= AGE_OF_MAJORITY) println("Показать экран со скрытым контентом")
+    val birthYear = readln().toInt()
+    if (Year.now().value - birthYear >= AGE_OF_MAJORITY) println("Показать экран со скрытым контентом")
     else println("Мал ещё")
 }
