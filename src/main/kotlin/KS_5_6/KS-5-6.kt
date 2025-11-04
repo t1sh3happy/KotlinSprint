@@ -7,16 +7,17 @@ const val CENTIMETERS_IN_METER = 100
 
 fun main() {
     print("Введите ваш вес в кг : ")
-
     val inputWeight = readln().toDouble()
     print("Введите ваш рост в см : ")
     val inputHeight = readln().toDouble()
-    val bodyMassIndex = inputWeight / ((inputHeight / CENTIMETERS_IN_METER) * (inputHeight / CENTIMETERS_IN_METER))
+    val heightInMeters = inputHeight / CENTIMETERS_IN_METER
+    val bodyMassIndex = inputWeight / (heightInMeters * heightInMeters)
     print("Ваш индекс составляет : %.2f. Категория веса - ".format(bodyMassIndex))
+
     when {
         bodyMassIndex < UNDERWEIGHT -> println("Недостаточная масса тела")
-        bodyMassIndex in UNDERWEIGHT..NORMAL_BODY_WEIGTH -> println("Нормальная масса тела")
-        bodyMassIndex in NORMAL_BODY_WEIGTH..OVERWEIGHT -> println("Избыточная масса тела")
-        bodyMassIndex > OVERWEIGHT -> println("Ожирение")
+        bodyMassIndex < NORMAL_BODY_WEIGTH -> println("Нормальная масса тела")
+        bodyMassIndex < OVERWEIGHT -> println("Избыточная масса тела")
+        else -> println("Ожирение")
     }
 }
