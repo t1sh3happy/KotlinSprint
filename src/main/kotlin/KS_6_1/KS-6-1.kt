@@ -10,9 +10,12 @@ fun main() {
 
     do {
         print("Введите логин : ")
-        var inputLog = readln()
+        val inputLog = readln()
         print("Введите пароль : ")
-        var inputPass = readln()
+        val inputPass = readln()
 
-    } while (inputLog != login && inputPass != password)
+    } while (inputLog != login || inputPass != password)
+
+    println("Авторизация прошла успешно")
+
 }
