@@ -4,15 +4,17 @@ fun main() {
     val number = (1..9).random()
     var counter = 5
     var inputNumber: Int
-    println(number)
+
     do {
         print("Угадайте число от 1 до 9: ")
         inputNumber = readln().toInt()
-        counter--
+        --counter
         if (inputNumber == number) {
             println("Это была великолепная игра!")
-            break
-        } else {println("Неверно, оставшееся количество попыток $counter")}
+            return
+        } else {
+            println("Неверно, оставшееся количество попыток $counter")
+        }
 
     } while (counter > 0)
     if (inputNumber != number) {
