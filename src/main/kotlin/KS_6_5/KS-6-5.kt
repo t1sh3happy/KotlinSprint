@@ -1,4 +1,4 @@
-package org.Evgeniy.KS_6_1
+package org.Evgeniy.KS_6_5
 
 fun main() {
 
@@ -6,13 +6,12 @@ fun main() {
     do {
         val firstNumber = (1..9).random()
         val secondNumber = (1..9).random()
-        val sum = firstNumber + secondNumber
         print("Введите сумму чисел $firstNumber и $secondNumber : ")
         val inputNumber = readln().toInt()
 
-        if (inputNumber == sum) {
+        if (inputNumber == firstNumber + secondNumber) {
             println("Добро пожаловать!")
-            break
+            return
         } else {
             counter--
             println("Неверно. Оставшееся количество попыток $counter")
