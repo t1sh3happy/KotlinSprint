@@ -8,16 +8,16 @@ fun main() {
     do {
         print("Угадайте число от 1 до 9: ")
         inputNumber = readln().toInt()
-        --counter
         if (inputNumber == number) {
             println("Это была великолепная игра!")
             return
         } else {
+            --counter
             println("Неверно, оставшееся количество попыток $counter")
         }
 
     } while (counter > 0)
-    if (inputNumber != number) {
+
         println("Вы проиграли. Было загадано число: $number")
-    }
+
 }
