@@ -13,13 +13,13 @@ fun main() {
         if (inputNumber == sum) {
             println("Добро пожаловать!")
             break
-        } else if (counter == 0) {
-            println("Доступ запрещен")
         } else {
             counter--
-            println("Неверно, предлагаю решить заново. Оставшееся количество попыток $counter")
-            }
+            println("Неверно. Оставшееся количество попыток $counter")
+        }
 
     } while (counter > 0)
+
+    println("Доступ запрещен")
 
 }
