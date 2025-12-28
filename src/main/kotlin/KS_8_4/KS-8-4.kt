@@ -4,7 +4,8 @@ fun main() {
     val ingredientsForPlov =
         arrayOf(
             "говядина", "рис басмати", "морковь", "лук",
-            "чеснок", "масло", "соль", "перец", "вода")
+            "чеснок", "масло", "соль", "перец", "вода"
+        )
     println("Список текущих ингридиентов: ")
 
     for (ingredient in ingredientsForPlov) {
@@ -23,6 +24,7 @@ fun main() {
         ingredientsForPlov.set(index, usersIngredientFor)
 
         println("Обновленный список ингредиентов:")
+
         for (ingredient in ingredientsForPlov) {
             println(ingredient)
         }
