@@ -15,7 +15,8 @@ fun main() {
     print("Введите информацию об ингредиенте, который вы хотите заменить: ")
     val usersIngredientInAll = readln()
 
-    if (!(ingredientsForPlov.contains(usersIngredientInAll))) {
+
+    if (ingredientsForPlov.indexOf(usersIngredientInAll) == -1 ){
         println("Ингредиента [$usersIngredientInAll] нет в списке")
     } else {
         print("Введите ингредиент, который вы хотите добавить:")
