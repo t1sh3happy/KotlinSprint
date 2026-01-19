@@ -14,16 +14,15 @@ fun main() {
 
     print("Введите информацию об ингредиенте, который вы хотите заменить: ")
     val usersIngredientInAll = readln()
+    val index = ingredientsForPlov.indexOf(usersIngredientInAll)
 
 
-    if (ingredientsForPlov.indexOf(usersIngredientInAll) == -1 ){
+    if (index == -1) {
         println("Ингредиента [$usersIngredientInAll] нет в списке")
     } else {
         print("Введите ингредиент, который вы хотите добавить:")
         val usersIngredientFor = readln()
-        val index = ingredientsForPlov.indexOf(usersIngredientInAll)
         ingredientsForPlov.set(index, usersIngredientFor)
-
         println("Обновленный список ингредиентов:")
 
         for (ingredient in ingredientsForPlov) {
