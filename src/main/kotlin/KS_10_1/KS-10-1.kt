@@ -7,9 +7,13 @@ fun main() {
     val compCount = getnumber()
     println("Компьютер бросает кости и его число составляет $compCount")
 
-    if (userCount == compCount) {println("Победила дружба")}
-    else if (userCount < compCount) {println("Победила машина")}
-    else {println("Победили кожанные")}
+    if (userCount == compCount) {
+        println("Победила дружба")
+    } else if (userCount < compCount) {
+        println("Победила машина")
+    } else {
+        println("Победили кожанные")
+    }
 
 }
 
