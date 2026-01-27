@@ -4,25 +4,20 @@ fun main() {
     print("Введите длинну пароля: ")
     val passLength = readln().toInt()
 
-    println(generation(passLength))
+    println(generate(passLength))
 
 }
 
-fun generation(passLength: Int): String {
+fun generate(passLength: Int): String {
+    val digits = '0'..'9'
+    val symbols = "!\"#\$%&()*+,-./ "
     val password = buildString {
-        if (passLength % 2 == 0) {
-            repeat(passLength / 2) {
-                append(('0'..'9').random())
-                append("!\"#\$%&()*+,-./ ".random())
-            }
-        } else {
-            repeat(passLength / 2) {
-                append(('0'..'9').random())
-                append("!\"#\$%&()*+,-./ ".random())
-
-            }
-            append(('0'..'9').random())
-
+        repeat(passLength / 2) {
+            append(digits.random())
+            append(symbols.random())
+        }
+        if (passLength % 2 != 0) {
+            append(digits.random())
         }
 
     }
