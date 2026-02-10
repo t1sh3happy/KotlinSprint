@@ -24,18 +24,25 @@ fun main() {
 
 fun authorize(login: String, password: String): String? {
     if (login == CORRECT_LOGIN && password == CORRECT_PASSWORD) {
-        val digits = ('a'..'z').plus('A'..'Z').plus('0'..'9')
-        val token = buildString {
-            repeat(CHARACTERS_IN_TOKEN) {
-                append(digits.random())
-            }
-
-        }
-        tokensStorage[token] = login
-        return token
+        val generativeToken = generate(login)
+        tokensStorage[generativeToken] = login
+        return generativeToken
     } else {
         return null
     }
+
+}
+
+fun generate(login: String): String {
+    val digits = ('a'..'z').plus('A'..'Z').plus('0'..'9')
+    val token = buildString {
+        repeat(CHARACTERS_IN_TOKEN) {
+            append(digits.random())
+        }
+
+    }
+    return token
+
 }
 
 fun getCart(token: String): List<String>? {
