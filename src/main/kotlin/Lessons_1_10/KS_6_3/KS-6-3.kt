@@ -1,4 +1,4 @@
-package KS_6_3
+package Lessons_1_10.KS_6_3
 
 const val MILLISECONDS = 1000
 
