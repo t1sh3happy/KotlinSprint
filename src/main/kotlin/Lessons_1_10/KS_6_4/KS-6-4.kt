@@ -1,4 +1,4 @@
-package KS_6_4
+package Lessons_1_10.KS_6_4
 
 fun main() {
     val number = (1..9).random()
