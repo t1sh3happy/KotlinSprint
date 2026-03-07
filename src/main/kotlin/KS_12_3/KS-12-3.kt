@@ -4,11 +4,13 @@ class Weather3(dayTemperatureKelvin: Int, nightTemperatureKelvin: Int, isPrecipi
     val celDayTemp: Int
     val celNightTemp: Int
     val isPrecipitation: Boolean
-    init{
+
+    init {
         celDayTemp = dayTemperatureKelvin - 273
         celNightTemp = nightTemperatureKelvin - 273
         isPrecipitation = isPrecipitationParam
     }
+
     fun printInfo() {
         println("температура днём: $celDayTemp, температура ночью: $celNightTemp, осадки: $isPrecipitation")
     }
