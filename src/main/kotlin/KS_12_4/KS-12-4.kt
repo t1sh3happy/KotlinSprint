@@ -9,10 +9,15 @@ class Weather4(dayTemperatureKelvin: Int, nightTemperatureKelvin: Int, isPrecipi
         celDayTemp = dayTemperatureKelvin - 273
         celNightTemp = nightTemperatureKelvin - 273
         isPrecipitation = isPrecipitationParam
+        printInfo()
+    }
+
+    fun printInfo() {
         println("температура днём: $celDayTemp, температура ночью: $celNightTemp, осадки: $isPrecipitation")
     }
 }
 
 fun main() {
     val day1 = Weather4(500, 780, false)
+    day1.printInfo()
 }
