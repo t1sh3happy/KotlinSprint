@@ -1,8 +1,8 @@
 package org.Evgeniy.KS_11_5
 
 class Forum {
-    val userList = mutableListOf<ForumMember>()
-    val messageList = mutableListOf<ForumMessage>()
+    private val userList = mutableListOf<ForumMember>()
+    private val messageList = mutableListOf<ForumMessage>()
     fun createNewUser(userName: String): ForumMember {
         val user = ForumMember.Builder(userName).build(userList.size)
         userList.add(user)
