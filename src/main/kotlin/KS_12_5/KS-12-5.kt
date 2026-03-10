@@ -2,15 +2,14 @@ package org.Evgeniy.KS_12_5
 
 import kotlin.random.Random
 
+const val KELVIN = 273
+
 class Weather5(dayTemperatureKelvin: Int, nightTemperatureKelvin: Int, isPrecipitationParam: Boolean) {
-    val celDayTemp: Int
-    val celNightTemp: Int
-    val isPrecipitation: Boolean
+    val celDayTemp = dayTemperatureKelvin - KELVIN
+    val celNightTemp = nightTemperatureKelvin - KELVIN
+    val isPrecipitation = isPrecipitationParam
 
     init {
-        celDayTemp = dayTemperatureKelvin - 273
-        celNightTemp = nightTemperatureKelvin - 273
-        isPrecipitation = isPrecipitationParam
         printInfo()
     }
 
@@ -38,8 +37,10 @@ fun main() {
     val avgNight = nightTemps.average()
     val rainyDays = weatherList.count { it.isPrecipitation == true }
 
-    println("Средняя дневная температура : $avgDay, " +
-            "Средняя ночная температура $avgNight, " +
-            "Количество дней с осадками: $rainyDays")
+    println(
+                "Средняя дневная температура : $avgDay, " +
+                "Средняя ночная температура $avgNight, " +
+                "Количество дней с осадками: $rainyDays"
+    )
 
 }
