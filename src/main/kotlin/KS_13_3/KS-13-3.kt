@@ -14,6 +14,6 @@ fun main() {
         PhoneDirectory3("Ангелина", 79996541123, "VK"),
         PhoneDirectory3("Владлен", 79683655411, "Gameloft")
     )
-    val companyList = phoneList.map { it.companyName }
+    val companyList = phoneList.mapNotNull { it.companyName }
     println("Все существующие компании : $companyList")
 }
