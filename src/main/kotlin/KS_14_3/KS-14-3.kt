@@ -1,9 +1,11 @@
 package org.Evgeniy.KS_14_3
 
-const val PI = 3.14159
+import kotlin.math.PI
 
 abstract class Figure(val color: String) {
+
     abstract fun getSquare(): Double
+
     abstract fun getPerimetr(): Double
 
 }
@@ -11,13 +13,11 @@ abstract class Figure(val color: String) {
 class Circle(color: String, val radius: Double) : Figure(color) {
     override fun getSquare(): Double {
         val square = PI * (radius * radius)
-        println("Площадь круга равна : $square")
         return square
     }
 
     override fun getPerimetr(): Double {
         val perimetr = 2 * PI * radius
-        println("Периметр круга равен : $perimetr")
         return perimetr
     }
 }
@@ -25,13 +25,11 @@ class Circle(color: String, val radius: Double) : Figure(color) {
 class Rectangle(color: String, val shirina: Double, val visota: Double) : Figure(color) {
     override fun getSquare(): Double {
         val square = shirina * visota
-        println("Площадь составляет $square")
         return square
     }
 
     override fun getPerimetr(): Double {
         val perimetr = 2 * (shirina + visota)
-        println("Периметр составляет $perimetr")
         return perimetr
     }
 
