@@ -1,5 +1,6 @@
 package org.Evgeniy.KS_15_4
 
+
 fun main() {
     val guitar = MusicalInstrument("guitar", 2)
     val guitarString = Component("Guitar string", 20)
