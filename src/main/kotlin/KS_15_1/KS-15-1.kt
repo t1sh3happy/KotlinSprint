@@ -22,7 +22,6 @@ interface Flyer {
     }
 }
 
-
 class Crucian : Swimmer
 
 class Duck : Swimmer, Flyer
