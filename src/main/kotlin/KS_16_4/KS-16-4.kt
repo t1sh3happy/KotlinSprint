@@ -12,11 +12,9 @@ class Order(val number: Int) {
     var status: String = "Создан"
         private set
 
-
     fun changeStatus(newStatus: String) {
         status = newStatus
     }
-
 
 }
 
