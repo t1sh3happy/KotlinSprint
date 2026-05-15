@@ -9,7 +9,7 @@ fun main() {
 }
 
 class Cube {
-    private var numberOfCubes: Int = Random.nextInt(1, 6)
+    private var numberOfCubes: Int = (1..6).random()
     fun getNumberOfCubes(): Int {
         return numberOfCubes
     }
