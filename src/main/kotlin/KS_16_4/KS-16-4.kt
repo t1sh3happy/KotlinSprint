@@ -3,11 +3,11 @@ package org.Evgeniy.KS_16_4
 fun main() {
 
     val order1 = Order(1)
-    order1.sendToManager(order1, "В доставке")
+    order1.sendToManager("В доставке")
 
 }
 
-class Order(val number: Int) {
+class Order(private val number: Int) {
     private var status: String = "Создан"
         private set
 
@@ -15,12 +15,12 @@ class Order(val number: Int) {
         status = newStatus
     }
 
-    fun sendToManager(order: Order, newStatus: String) {
+    fun sendToManager(newStatus: String) {
         println(
-            "Заявка менеджеру: по заказу ${order.number}, " +
-                    "текущий статус - ${order.status}, поменять статус на $newStatus"
+            "Заявка менеджеру: по заказу $number, " +
+                    "текущий статус - $status, поменять статус на $newStatus"
         )
-        order.changeStatus(newStatus)
+        changeStatus(newStatus)
         println("Статус изменен на $newStatus")
     }
 }
