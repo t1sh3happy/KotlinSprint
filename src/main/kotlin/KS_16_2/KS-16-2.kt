@@ -7,7 +7,7 @@ private const val PI = 3.14
 fun main() {
     val circle1 = Circle(5.0)
     println("Длина круга составляет ${circle1.calculateLength()}")
-    println("Площадь круга составляет ${circle1.calculateSquare()}")
+    println("Площадь круга составляет ${circle1.calculateArea()}")
 
 }
 
@@ -17,7 +17,7 @@ class Circle(private val radius: Double) {
         return 2 * PI * radius
     }
 
-    fun calculateSquare(): Double {
+    fun calculateArea(): Double {
         return PI * radius.pow(2)
     }
 }
