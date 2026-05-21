@@ -10,12 +10,8 @@ fun main() {
     println("Название корабля - ${ship.shipName}, порт - ${ship.port}, скорость -  ${ship.averageSpeed}")
 }
 
-class Ship(shipName: String, port: String, averageSpeed: Int) {
+class Ship(shipName: String, var port: String, var averageSpeed: Int) {
     var shipName: String = shipName
-        set(value) {
-            println("Невозможно изменить имя корабля")
-        }
+        set(value) = println("Невозможно изменить имя корабля")
 
-    var port: String = port
-    var averageSpeed: Int = averageSpeed
 }
