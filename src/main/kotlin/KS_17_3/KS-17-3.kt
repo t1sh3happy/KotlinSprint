@@ -1,17 +1,17 @@
 package org.Evgeniy.KS_17_3
 
 fun main() {
-    val folder1 = Folder("Папка", 20, false)
-    println("Имя папки ${folder1.name}, количество файлов ${folder1.fileCount}, скрытность: ${folder1.isHidden}")
-    folder1.isHidden = true
-    println("Имя папки ${folder1.name}, количество файлов ${folder1.fileCount}, скрытность: ${folder1.isHidden}")
+    val hiddenFolder = Folder("Скрытая папка", 20, true)
+    println("Имя папки ${hiddenFolder.name}, количество файлов ${hiddenFolder.fileCount}")
+    val justFolder = Folder("Просто папка", 20, false)
+    println("Имя папки ${justFolder.name}, количество файлов ${justFolder.fileCount} ")
 }
 
 class Folder(name: String, fileCount: Int, isHidden: Boolean) {
     val name: String = name
         get() = if (isHidden) "Скрытая папка" else field
-    var fileCount: Int = fileCount
+    val fileCount: Int = fileCount
         get() = if (isHidden) 0 else field
-    var isHidden = isHidden
+    private val isHidden = isHidden
 
 }
