@@ -1,19 +1,20 @@
 package org.Evgeniy.KS_18_2
 
-open class Dice {
-    open fun roll() {}
+abstract class Dice {
+    abstract val seides: Int
+    fun roll() = println("Выпало число: ${(1..seides).random()}")
 }
 
 class Dice4 : Dice() {
-    override fun roll() = println("Выпало число: ${(1..4).random()}")
+    override val seides = 4
 }
 
 class Dice6 : Dice() {
-    override fun roll() = println("Выпало число: ${(1..6).random()}")
+    override val seides = 6
 }
 
 class Dice8 : Dice() {
-    override fun roll() = println("Выпало число: ${(1..8).random()}")
+    override val seides = 8
 }
 
 fun main() {
