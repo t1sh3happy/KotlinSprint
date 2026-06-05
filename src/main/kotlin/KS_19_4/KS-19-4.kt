@@ -3,15 +3,15 @@ package org.Evgeniy.KS_19_4
 enum class Shell(val damage: Int) {
     BLUE(5),
     GREEN(10),
-    RED(20);
+    RED(20),
 }
 
 class Tank {
     var loadedShell: Shell? = null
 
     fun load(shell: Shell) {
-        println("Снаряд $loadedShell заменён на: $shell")
         loadedShell = shell
+        println("Снаряд $loadedShell заменён на: $shell")
     }
 
     fun shoot() {
