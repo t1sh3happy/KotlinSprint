@@ -12,12 +12,12 @@ class Robot {
 
     fun say() {
         val randomPhrase = phrases.random()
-        println(modifier?.invoke(randomPhrase) ?: randomPhrase)
+        println(modifier(randomPhrase))
     }
 
-    private var modifier: ((String) -> String)? = null
+    private var modifier: ((String) -> String) = { it }
 
-    fun setModifier(newModifier: ((String) -> String)) {
+    fun setModifier(newModifier: (String) -> String) {
         modifier = newModifier
     }
 
