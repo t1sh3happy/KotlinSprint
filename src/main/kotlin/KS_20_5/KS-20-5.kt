@@ -15,7 +15,7 @@ class Robot {
         println(modifier(randomPhrase))
     }
 
-    private var modifier: ((String) -> String) = { it }
+    private var modifier: (String) -> String = { it }
 
     fun setModifier(newModifier: (String) -> String) {
         modifier = newModifier
