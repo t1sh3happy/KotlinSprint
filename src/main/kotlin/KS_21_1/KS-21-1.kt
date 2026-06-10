@@ -5,7 +5,6 @@ fun String.vowelCount(): Int {
     return count { it in vowels }
 }
 
-
 fun main() {
 
     println("привет".vowelCount())
