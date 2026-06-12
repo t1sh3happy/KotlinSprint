@@ -17,5 +17,5 @@ fun main() {
 }
 
 fun Player.isHealthy(): Boolean {
-    return this.currentHealth == this.maxHealth
+    return currentHealth == maxHealth
 }
