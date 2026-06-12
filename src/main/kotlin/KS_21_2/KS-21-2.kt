@@ -2,7 +2,7 @@ package org.Evgeniy.KS_21_2
 
 fun List<Int>.evenNumbersSum(): Int {
 
-    return sumOf { if (it % 2 == 0) it else 0 }
+    return filter { it % 2 == 0 }.sum()
 }
 
 fun main() {
