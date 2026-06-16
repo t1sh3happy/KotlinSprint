@@ -9,6 +9,6 @@ fun main() {
     val book2 = DataBook1(title = "Kotlin Sprint", author = "Sprint Kotlin")
 
     println(book1) // toString работает дефолтно, выводится полное имя класса и 16-ричное представление хэш-кода объекта
-    println(book2) // toString переписан data-классом, чтобы получить читаемые данные
+    println(book2) // toString переписан data-классом, чтобы получить читаемые значения
 
 }
